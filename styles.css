@@ -1,0 +1,647 @@
+/*---Reset---*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*---Define variables---*/
+:root {
+    --clr-secundary: #ffffff80;
+    --clr-gradient: linear-gradient(113.49deg, #984D38 -30.3%, #894839 -20.11%, #673B3C 3.9%, #272440 47.55%, #181E41 58.12%, #181E41 67.2%, #181E41 103.58%);
+    --clr-primary: #FFFF;
+    --clr-details: rgba(255, 255, 255, 0.8);
+    --clr-footer: rgb(9, 7, 37);
+    --fnt-primary: 'Playfair Display';
+    --fnt-secundary: 'Poppins';
+    --fnt-light: 300;
+    --fnt-normal: 400;
+    --fnt-medium: 500;
+    --fnt-bold: 700;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    background: var(--clr-gradient);
+    font-size: 16px;
+    position: absolute;
+}
+
+/*---Navigation bar---*/
+header {
+    height: 10%;
+    
+}
+
+.navbar {
+  padding: 0.8em;
+
+}
+
+#code {
+    font-size: 0.7em;
+    margin-right: 0.2em;
+}
+
+#logo {
+    color: var(--clr-primary);
+    font-family: var(--fnt-secundary);
+    font-style: normal;
+    font-weight: var(--fnt-light);
+    cursor: pointer;
+}
+
+#logo span {
+    font-size: 0.8em;
+}
+
+#menu {
+    color: var(--clr-primary);
+}
+
+#menu:active {
+    color: var(--clr-secundary);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.nav-link {
+    color: var(--clr-primary);
+    padding: 0;
+}
+
+#navbar-items .navbar-nav {
+    margin-top: 0.4em;
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    gap: 1em;
+}
+
+.navbar .active {
+    border-bottom: 1px solid var(--clr-primary);
+}
+
+.nav-item {
+    font-family: var(--fnt-secundary);
+    font-style: normal;
+    font-weight: var(--fnt-medium);
+    font-size: 0.8em;
+}
+
+.nav-link:hover {
+    color: var(--clr-secundary);
+}
+  
+.navbar .active:hover {
+    border-bottom: 1px solid var(--clr-secundary);
+}
+
+
+/*---Main---*/
+main {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.RB {
+    color: var(--clr-primary);
+    font-family: var(--fnt-primary);
+    font-weight: var(--fnt-bold);
+    font-size: 3.5em;
+    padding-bottom: 2.3em;
+    padding-left: 0.6em;
+}
+.name {
+    display: none;
+    position: fixed;
+    left: 12em;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    border-bottom: 0;
+    font-family: var(--fnt-primary);
+    color: var(--clr-primary);
+    font-weight: var(--fnt-bold);
+    letter-spacing: 0.9px;
+    padding-bottom: 2em;
+}
+  
+.name li {
+    float: left;
+    font-weight: var(--fnt-bold);
+    font-size: 1em;
+    color: var(--clr-primary);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 2em;
+}
+
+.name.hidden li.spaced {
+    padding-left: 0;
+}
+
+.name li.spaced {
+    padding-left: 0.5em;
+}
+  
+.name.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+}
+  
+.work {
+    position: fixed;
+    left: 11em;
+    transform: translateX(-50%) translateY(-50%);
+    list-style: none;
+    border-bottom: 0;
+    font-family: var(--fnt-secundary);
+    color: var(--clr-secundary);
+    font-weight: var(--fnt-bold);
+    letter-spacing: 0.1em;
+}
+   
+.work li {
+    float: left;
+    font-weight: var(--fnt-medium);
+    font-size: 0.6em;
+    color: var(--clr-secundary);
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+    max-width: 2em;
+}
+
+.work.hidden li.spaced {
+    padding-left: 0;
+}
+
+.work li.spaced {
+    padding-left: 0.5em;
+}
+  
+.work.hidden li.ghost {
+    opacity: 0;
+    max-width: 0;
+}
+
+/*---Footer---*/
+footer {
+    position:fixed;
+    height: 10%;
+    width: 100%;
+    background-color: var(--clr-footer);
+    border-top: solid 1px var(--clr-secundary);
+    padding: 0em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact a {
+    position: relative;
+    height: 1.2em;
+    width: 2.2em;
+    border: 1px solid var(--clr-secundary);
+    background: transparent;
+    user-select: none;
+    white-space: nowrap;
+    transition: all .05s linear;
+    text-decoration: none;
+}
+
+#email {
+    font-family: var(--fnt-primary);
+    font-size: 0.6em;
+    font-style: normal;
+    font-weight: var(--fnt-normal);
+    color: var(--clr-secundary);
+    display: flex;
+    padding-left: 0.4em;
+    text-decoration: none;
+
+}
+   
+.contact a:before, a:after {
+    content: "";
+    position: absolute;
+    background: var(--clr-footer);
+    transition: all .2s linear;
+}
+   
+.contact a:before {
+    width: calc(100% + 6px);
+    height: calc(100% - 16px);
+    top: 8px;
+    left: -3px;
+}
+
+.contact a:after {
+    width: calc(100% - 16px);
+    height: calc(100% + 6px);
+    top: -3px;
+    left: 8px;
+}
+   
+.contact a:hover {
+    cursor: pointer;
+}
+   
+.contact a:active {
+    transform: scale(0.95);
+}
+   
+.contact a:hover:before {
+    height: calc(100% - 32px);
+    top: 16px;
+}
+   
+.contact a:hover:after {
+    width: calc(100% - 32px);
+    left: 16px;
+}
+   
+.contact a span {
+    font-size: 15px;
+    z-index: 3;
+    position: relative;
+    font-weight: 600;
+}
+
+footer h2 {
+    font-family: var(--fnt-primary);
+    font-style: normal;
+    font-weight: var(--fnt-normal);
+    color: var(--clr-secundary);
+    margin-right: 1em;
+    font-size: 1em;
+}
+
+.social {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5em;
+}
+    
+
+#insta {
+    color: var(--clr-primary); 
+    background: var(--clr-secundary);
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    font-size: 0.8em;
+}
+
+#linkedin { 
+    color: var(--clr-primary); 
+    background: var(--clr-secundary);
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    font-size: 0.8em;
+}
+
+#github { 
+    color: var(--clr-primary); 
+    background: var(--clr-secundary);
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0.4rem;
+    font-size: 0.8em;
+}
+
+
+/*---@medias---*/
+
+@media screen and (max-width: 350px) {
+
+    .work {
+        padding-left: 0;
+        left: 11em;
+        letter-spacing: 0.1em;
+    }
+
+    .work li {
+        font-size: 0.6em;
+    }
+
+}   
+
+@media screen and (min-width: 400px) {
+
+
+    .work {
+        left: 12em;
+    }
+
+    .work li {
+        font-size: 0.7em;
+        letter-spacing: 0.2em;
+    }
+
+
+}
+
+@media screen and (min-width: 450px) {
+
+    .navbar{
+        padding-left: 5em;
+        padding-right: 5em;;
+    }
+
+    .work {
+        left: 14em;
+    }
+
+    .work li {
+        font-size: 0.8em;
+    }
+
+    footer {
+        justify-content: space-around;
+    }
+
+    #insta {
+        font-size: 1em;
+        padding: 0.5rem;  
+    }
+
+    #linkedin {
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    #github {
+        font-size: 1em;
+        padding: 0.5rem;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: row;
+        gap: 1em;
+    }
+
+    #email {
+        font-size: 0.75em;
+        padding-left: 0.6em;
+    }
+
+    .contact a {
+        position: relative;
+        height: 1.8em;
+        width: 3em;
+        padding-top: 0.3em;
+    }
+   
+    footer h2 {
+    margin-right: 1em;
+    font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 500px) {
+    
+    .work {
+        left: 15.5em;
+    }
+
+    .work li {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .RB {
+        display: none;
+    }
+
+    .name {
+        display: block;
+        left: 18em;
+    }
+
+    .name li {
+        font-size: 1.6em;
+    }
+
+    .work {
+        left: 18em;
+    }
+
+    .work li {
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (min-width: 700px) {
+
+    .RB {
+        display: none;
+    }
+    .name {
+        display: block;
+        left: 22em;
+    }
+
+    .name li {
+        font-size: 1.75em;
+    }
+
+    .work {
+        left: 22em;
+    }
+
+    .work li {
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+
+    .RB {
+        display: none;
+    }
+    .name {
+        display: block;
+        left: 25em;
+    }
+
+    .name li {
+        font-size: 2.2em;
+    }
+
+    .work {
+        left: 25em;
+    }
+
+    .work li {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (min-width: 900px) {
+
+    .RB {
+        display: none;
+    }
+
+    .name {
+        display: block;
+        left: 28em;
+    }
+
+    .name li {
+        font-size: 2.5em;
+    }
+
+    .work {
+        left: 28em;
+    }
+
+    .work li {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (min-width: 990px) {
+
+    #navbar-items .navbar-nav {
+        gap: 3em;
+        font-size: 0.9em;
+    }
+
+    
+    #logo {
+        font-size: 1em;
+    }
+
+    .RB {
+        display: none;
+    }
+
+    .name {
+        display: block;
+        left: 30em;
+    }
+
+    .name li {
+        font-size: 2.7em;
+    }
+
+    .work {
+        left: 30em;
+    }
+
+    .work li {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1100px) {
+
+    .RB {
+        display: none;
+    }
+
+    .name {
+        display: block;
+        left: 34em;
+    }
+
+    .name li {
+        font-size: 2.5em;
+    }
+
+    .work {
+        left: 34em;
+    }
+
+    .work li {
+        font-size: 1em;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .RB {
+        display: none;
+    }
+    .name {
+        display: block;
+        left: 37em;
+    }
+
+    .name li {
+        font-size: 3.4em;
+    }
+
+    .work {
+        left: 37em;
+    }
+
+    .work li {
+        font-size: 1.3em;
+    }
+
+}
+
+@media screen and (min-width: 1400px) {
+
+    .RB {
+        display: none;
+    }
+    .name {
+        display: block;
+        left: 44em;
+    }
+
+    .name li {
+        font-size: 3.6em;
+    }
+
+    .work {
+        left: 44em;
+    }
+
+    .work li {
+        font-size: 1.3em;
+    }
+
+}

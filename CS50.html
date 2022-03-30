@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,900&display=swap" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
+        
+        <!-- CSS files -->
+        <link href="stylesCS50.css" rel="stylesheet"/> 
+
+        <!-- JavaScript Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+        //Snippets animation
+        $(document).ready(function(){
+            animateDiv('#a', 4000);
+            animateDiv('#b', 4000);
+            animateDiv('#c', 4000);
+            animateDiv('#d', 4000);
+            animateDiv('#e', 4000);
+            animateDiv('#f', 4000);
+            animateDiv('#g', 4000);
+            animateDiv('#h', 4000);
+            animateDiv('#i', 4000);
+            animateDiv('#j', 4000);
+            animateDiv('#k', 4000);
+            animateDiv('#l', 4000);
+            animateDiv('#m', 4000);
+            animateDiv('#n', 4000);
+            animateDiv('#o', 4000);
+            animateDiv('#p', 4000);
+            animateDiv('#q', 4000);
+        });
+
+        //Apply changes when user stops the on-screen mouse pointer above any snippet
+        $(document).ready(function(){
+            $(".snip").hover(function (){
+                $(this).animate({
+                    opacity: "30%",
+                    fontSize: "1.5em"
+                });
+            });
+        });
+
+        function makeNewPosition(){
+    
+            // Get viewport dimensions
+            var h = $(window).height();
+            var w = $(window).width();
+    
+            //Calculate new position
+            var nh = Math.floor(Math.random() * h);
+            var nw = Math.floor(Math.random() * w);
+    
+            return [nh,nw];    
+        }
+
+        function animateDiv(myclass, speed){
+            //Move snippet to new position at certain speed
+            var newq = makeNewPosition();
+            $(myclass).animate({ top: newq[0], left: newq[1] }, speed,   function(){
+            animateDiv(myclass, speed);        
+            });
+        };
+        </script>
+
+        <title>CS50</title>
+    </head>
+    
+    <body>
+        <header>
+             <!--Navaigation bar expands in larger screens-->
+            <nav class="navbar navbar-expand-lg">
+                <a class="navbar-brand text-decoration-none" href="http://127.0.0.1:5500/index.html" id = "logo"><i class="bi bi-code" id = "code"></i><span>renatab.</span></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items" aria-controls="navbar-items" 
+                    aria-expanded="false" aria-label="Toggle navigation"><i class="bi bi-list" id = "menu"></i></button>
+                <div class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/about.html">About me</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://127.0.0.1:5500/skills.html">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="http://127.0.0.1:5500/CS50.html">CS50</a></li>                      
+                    </ul>             
+                </div>
+            </nav>
+        </header>
+        <main>
+            <div class = "snippets">
+                <div class='snip' id = "a"><span>&lt;</span><span>/</span>script<span>></span></div>
+                <div class='snip' id = "b">printf("%s\n", candidates[i]);</div>
+                <div class='snip' id = "c">re.search(r"4(\d{12}|\d{15}))</div>
+                <div class='snip' id = "d"><span>$</span><span>(</span>window<span>)</span></div>
+                <div class='snip' id = "e">SELECT name FROM songs WHERE name LIKE '%feat%';</div>
+                <div class='snip' id = "f">int main(int argc, string argv[])</div>
+                <div class='snip' id = "g">re.findall(r"(\.|\!|\?)"</div>
+                <div class='snip' id = "h">input[type="text"]:hover</div>
+                <div class='snip' id = "i">winners.append(teams[i])</div>
+                <div class='snip' id = "j">fread(header, HEADER_SIZE, 1, input);</div>
+                <div class='snip' id = "k"><span>&lt;</span><span>/</span>html<span>></span></div>
+                <div class='snip' id = "l"><span>&lt;</span><span>/</span>header<span>></span></div>
+                <div class='snip' id = "m">SELECT id FROM airports ORDER BY hour;</div>
+                <div class='snip' id = "n"><span>$</span><span>(</span>"#navbar-items"<span>)</span></div>
+                <div class='snip' id = "o">print(f"Grade {index_round}")</div>
+                <div class='snip' id = "p">.contact a:hover {cursor: pointer;}</div> 
+                <div class='snip' id = "q"><span>&lt;</span>title<span>></span>Homepage<span>&lt;</span><span>/</span>title<span>></span></div> 
+            </div>
+            <div class = "opaque">
+                <h1>CS50</h1>
+                <h2><span>&lt;</span><span>/</span>Snippets<span>></span></h2>
+                <h4 class = "note">Hover cursor over snippet to slow it down!</h4>
+            </div>
+            
+            
+
+        </main>
+           
+        <footer>    
+            <div class = "contact"> 
+                <h2>Get in touch!</h2>
+                <a class= "button" href= "mailto:renatab_leao@yahoo.com.br">
+                    <span id = "email"> Email
+                    </span></a>
+                
+            </div>
+            <div class = "social">
+                <a class= "text-decoration-none" href = "https://www.instagram.com/renatableao"><i class= "bi bi-instagram" id = "insta"></i></a> 
+                <a class= "text-decoration-none" href = "https://www.linkedin.com/in/renatabarc"><i class= "bi bi-linkedin" id = "linkedin"></i></a> 
+                <a class= "text-decoration-none" href = "https://github.com/Renatableao"><i class="bi bi-github" id = "github"></i></a>
+            </div>
+        </footer>
+    </body>
+</html>
