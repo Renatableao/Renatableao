@@ -1,3 +1,5 @@
+- Junior Dev | Python | JavaScript | Backend
+- 
 - 👋 Hi, I’m @Renatableao, 34 years old, brazilian, married and mother of Vitor (3y) and Manuela (1y). 
 - I graduated in Public Administration, worked in the area for few years but it wasn't quite me, so I quit and started my own business. 
 - When I got pregnant I decided to be a full time mum.
